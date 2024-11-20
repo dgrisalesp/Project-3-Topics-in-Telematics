@@ -45,3 +45,9 @@ if __name__ == "__main__":
 
     updatedNYTaxi.write.parquet(sys.argv[2])
 ~~~
+
+
+#comando ejecucion#
+~~~
+spark-submit spark-etl.py s3://bucketdatoscovid/raw/Casos_positivos_de_COVID-19_en_Colombia..csv s3://bucketdatoscovid/trusted/pueba
+~~~
