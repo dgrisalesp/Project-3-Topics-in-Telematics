@@ -9,7 +9,7 @@ aws s3 cp data.csv s3://covid-data-bucket/raw/
 
 
 #spark-etl.py#
-
+~~~
 import sys
 from datetime import datetime
 from pyspark.sql import SparkSession
@@ -44,3 +44,4 @@ if __name__ == "__main__":
 
 
     updatedNYTaxi.write.parquet(sys.argv[2])
+~~~
