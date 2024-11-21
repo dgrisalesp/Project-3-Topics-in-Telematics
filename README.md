@@ -16,9 +16,9 @@ from pyspark.sql.functions import *
 
 if __name__ == "__main__":
 
-    print(len(sys.argv))
+    print (len(sys.argv))
     if len(sys.argv) != 3:
-        print("Usage: spark-etl [raw-folder] [trusted-folder]")
+        print ("Usage: spark-etl [raw-folder] [trusted-folder]")
         sys.exit(0)
 
     spark = SparkSession\
@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
     df = myTaxi.withColumn("current_date", lit(datetime.now()))
 
-    df.printSchema() 
+    df.printSchema()
     df.columns
     len(df.columns)
     df.count()
@@ -42,7 +42,7 @@ if __name__ == "__main__":
 
 
 
-    updatedNYTaxi.write.parquet(sys.argv[2])
+    df.write.parquet(sys.argv[2])
 ~~~
 
 
