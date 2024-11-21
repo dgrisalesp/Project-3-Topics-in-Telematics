@@ -1,13 +1,13 @@
 # Project-3-Topics-in-Telematics
 
-##Ingesta de datos 
+## Ingesta de datos 
 ~~~
 #!/bin/bash
 wget -O data.csv "https://www.datos.gov.co/api/views/gt2j-8ykr/rows.csv?accessType=DOWNLOAD"
 aws s3 cp data.csv s3://bucketdatoscovid/raw/
 ~~~
 
-###spark-etl.py
+## spark-etl.py
 ~~~
 import sys
 from datetime import datetime
@@ -46,13 +46,13 @@ if __name__ == "__main__":
 ~~~
 
 
-###comando ejecucion
+## comando ejecucion
 ~~~
 spark-submit spark-etl.py s3://bucketdatoscovid/raw/Casos_positivos_de_COVID-19_en_Colombia..csv s3://bucketdatoscovid/trusted/pueba
 ~~~
 
 
-###creacion del step para el clster
+## creacion del step para el clster
 ~~~
 ##TIPO## ....::::...JAR PERSONALIZADO
 command-runner.jar ##ubicacion de JAR
