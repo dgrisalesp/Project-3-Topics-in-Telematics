@@ -50,3 +50,14 @@ if __name__ == "__main__":
 ~~~
 spark-submit spark-etl.py s3://bucketdatoscovid/raw/Casos_positivos_de_COVID-19_en_Colombia..csv s3://bucketdatoscovid/trusted/pueba
 ~~~
+
+
+#creacion del step para el clster#
+~~~
+##TIPO## ....::::...JAR PERSONALIZADO
+command-runner.jar ##ubicacion de JAR
+
+
+##ARGUMENTO##
+spark-submit s3://bucketdatoscovid/raw/spark-etl.py s3://bucketdatoscovid/raw/Casos_positivos_de_COVID-19_en_Colombia..csv s3://bucketdatoscovid/trusted/pueba2
+~~~
