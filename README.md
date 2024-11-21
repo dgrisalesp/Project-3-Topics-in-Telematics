@@ -4,7 +4,7 @@ Ingesta de datos
 ~~~
 #!/bin/bash
 wget -O data.csv "https://www.datos.gov.co/api/views/gt2j-8ykr/rows.csv?accessType=DOWNLOAD"
-aws s3 cp data.csv s3://covid-data-bucket/raw/
+aws s3 cp data.csv s3://bucketdatoscovid/raw/
 ~~~
 
 ##spark-etl.py##
